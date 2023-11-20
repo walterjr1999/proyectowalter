@@ -1,193 +1,70 @@
-/* helpers/grid.css */
-
+/* Contenedor principal */
 .grid {
-  inline-size: 90%;
-  margin-inline: auto;
-  max-inline-size: 48em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Diseño adaptable para diferentes tamaños de pantalla */
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
 }
 
-/* helpers/sticky.css */
-
-.sticky {
-  position: sticky;
-  will-change: transform;
-}
-
-.sticky--top {
-  top: 0;
-}
-
-/* layout/base.css */
-
-* {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.75;
-  margin: 0;
-  min-block-size: 100vh;
-}
-
-/* layout/header.css */
-
+/* Encabezado */
 .header {
-  background-color: #f7eeb3;
-  padding-block: 1em;
+    background-color: #f7eeb3;
+    padding: 1em;
 }
 
-
-.header::after {
-  bottom: 0;
-  box-shadow: 0 0.0625em 0.5em rgba(0, 0, 0, 0.3);
-  content: '';
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: opacity 0.3s;
-  z-index: -1;
-}
-
-.header.is-active::after {
-  opacity: 1;
-}
-
-/* layout/main.css */
-
-.main {
-  padding-block: 6em;
-}
-
-/* modules/headline.css */
-
-h1 {
-  margin-block: 0 0.5em;
-}
-
-/* modules/navigation.css */
-
+/* Menú de navegación */
 .navigation__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navigation__list--inline {
-  display: flex;
-  gap: 1.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .navigation__link {
-  color: inherit;
-  display: block;
-  padding-inline: 1em;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
+    padding: 0.5em 1em;
 }
 
 .navigation__link--is-active {
-  background-color: #000;
-  border-radius: 999em;
-  color: #fff;
-}
-
-/* modules/paragraph.css */
-
-p {
-  padding-block: 1.5em;
-}
-.navbar {
-    position: fixed;
-
-}
-.navbar  img {
-    margin: 1em 0 0 1em;
-    width: 200px;
-}
-#content {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: url("https://images.pexels.com/photos/1252869/pexels-photo-1252869.jpeg?cs=srgb&dl=pexels-hristo-fidanov-1252869.jpg&fm=jpg") no-repeat center center;
-    background-size: cover;
-}
-#content h3 {
-  letter-spacing: 0.5em;
-    margin: 0.5em ;
+    background-color: #000;
+    border-radius: 999em;
     color: #fff;
-    text-align: center;
-    font-family: 'Dosis', arial, sans-serif;
-  }
+}
 
+/* Contenido principal */
+.main {
+    padding: 2em;
+}
+
+/* Pie de página móvil */
 #mobile-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    @media(min-width: 768px) {
-        display: none;
-    }
-}
-#mobile-menu {
-  background:linear-gradient(30deg, crimson,sienna, royalblue, indianred, purple);
-}
-#mobile-footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    overflow: hidden;
-}
-.mobile-link {
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-}
-.mobile-link a {
-    font-size: 26px;
-    color: #fff;
-    text-decoration: none;
-    padding: 0px 15px 0px 15px;
-}
-#mobile-footer-close {
-    position: relative;
+    background: #333; /* Cambia el color de fondo según tu diseño */
+    color: #fff; /* Cambia el color del texto según tu diseño */
+    padding: 1em;
+    text-align: center;
 }
 
-.is-rotating {
-    transform: rotate(135deg);
+#mobile-footer-container {
+    display: flex;
+    justify-content: center;
 }
-.is-rotating-back {
-    transform: rotate(-90deg);
+
+.mobile-link {
+    display: flex;
+    gap: 10px;
 }
-.mobile-menu-hide {
-    animation: hideFooter 10s forwards;
+
+.mobile-link a {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
 }
-.mobile-menu-show {
-    animation: showFooter 1s forwards;
-}
-@keyframes hideFooter {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(1000px);
-        opacity: 0;
-    }
-}
-@keyframes showFooter {
-    0% {
-        transform: translateY(300px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+
+/* Otras estilizaciones y ajustes necesarios */
