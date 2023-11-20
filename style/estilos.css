@@ -1,31 +1,193 @@
-/* Media queries para tamaños de pantalla específicos */
-@media screen and (max-width: 768px) {
-  .header {
-    padding-block: 0.5em;
-  }
-  .main {
-    padding-block: 3em;
-  }
-  /* Otros estilos específicos para pantallas más pequeñas */
+/* helpers/grid.css */
+
+.grid {
+  inline-size: 90%;
+  margin-inline: auto;
+  max-inline-size: 48em;
 }
 
-/* Imágenes adaptables */
-img {
-  max-width: 100%;
-  height: auto;
+/* helpers/sticky.css */
+
+.sticky {
+  position: sticky;
+  will-change: transform;
 }
 
-/* Estilos flexibles para diseño adaptable */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.sticky--top {
+  top: 0;
 }
 
-/* Unidades de medida relativas para tamaños de fuente y dimensiones */
+/* layout/base.css */
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.75;
+  margin: 0;
+  min-block-size: 100vh;
+}
+
+/* layout/header.css */
+
 .header {
-  padding-block: 1.5em;
-  font-size: 1.2em;
+  background-color: #f7eeb3;
+  padding-block: 1em;
 }
 
-/* Más estilos y ajustes aquí... */
+
+.header::after {
+  bottom: 0;
+  box-shadow: 0 0.0625em 0.5em rgba(0, 0, 0, 0.3);
+  content: '';
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+.header.is-active::after {
+  opacity: 1;
+}
+
+/* layout/main.css */
+
+.main {
+  padding-block: 6em;
+}
+
+/* modules/headline.css */
+
+h1 {
+  margin-block: 0 0.5em;
+}
+
+/* modules/navigation.css */
+
+.navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__list--inline {
+  display: flex;
+  gap: 1.5em;
+}
+
+.navigation__link {
+  color: inherit;
+  display: block;
+  padding-inline: 1em;
+  text-decoration: none;
+}
+
+.navigation__link--is-active {
+  background-color: #000;
+  border-radius: 999em;
+  color: #fff;
+}
+
+/* modules/paragraph.css */
+
+p {
+  padding-block: 1.5em;
+}
+.navbar {
+    position: fixed;
+
+}
+.navbar  img {
+    margin: 1em 0 0 1em;
+    width: 200px;
+}
+#content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("https://images.pexels.com/photos/1252869/pexels-photo-1252869.jpeg?cs=srgb&dl=pexels-hristo-fidanov-1252869.jpg&fm=jpg") no-repeat center center;
+    background-size: cover;
+}
+#content h3 {
+  letter-spacing: 0.5em;
+    margin: 0.5em ;
+    color: #fff;
+    text-align: center;
+    font-family: 'Dosis', arial, sans-serif;
+  }
+
+#mobile-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    @media(min-width: 768px) {
+        display: none;
+    }
+}
+#mobile-menu {
+  background:linear-gradient(30deg, crimson,sienna, royalblue, indianred, purple);
+}
+#mobile-footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.mobile-link {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+}
+.mobile-link a {
+    font-size: 26px;
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 15px 0px 15px;
+}
+#mobile-footer-close {
+    position: relative;
+}
+
+.is-rotating {
+    transform: rotate(135deg);
+}
+.is-rotating-back {
+    transform: rotate(-90deg);
+}
+.mobile-menu-hide {
+    animation: hideFooter 10s forwards;
+}
+.mobile-menu-show {
+    animation: showFooter 1s forwards;
+}
+@keyframes hideFooter {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+}
+@keyframes showFooter {
+    0% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
