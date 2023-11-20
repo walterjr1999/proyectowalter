@@ -1,70 +1,35 @@
-/* Contenedor principal */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Diseño adaptable para diferentes tamaños de pantalla */
-    gap: 20px;
-    padding: 20px;
-    margin: 0 auto;
+/* Estilos adicionales para el portafolio de diseñador gráfico */
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
 }
 
-/* Encabezado */
 .header {
-    background-color: #f7eeb3;
+    background-color: #fff;
     padding: 1em;
 }
 
-/* Menú de navegación */
-.navigation__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.navigation__link {
-    color: inherit;
-    text-decoration: none;
-    padding: 0.5em 1em;
-}
-
-.navigation__link--is-active {
-    background-color: #000;
-    border-radius: 999em;
-    color: #fff;
-}
-
-/* Contenido principal */
 .main {
     padding: 2em;
 }
 
-/* Pie de página móvil */
-#mobile-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: #333; /* Cambia el color de fondo según tu diseño */
-    color: #fff; /* Cambia el color del texto según tu diseño */
-    padding: 1em;
-    text-align: center;
+.project {
+    margin-bottom: 20px;
 }
 
-#mobile-footer-container {
-    display: flex;
-    justify-content: center;
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.mobile-link {
-    display: flex;
-    gap: 10px;
+.project p {
+    margin-top: 10px;
+    font-size: 16px;
 }
 
-.mobile-link a {
-    font-size: 24px;
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Otras estilizaciones y ajustes necesarios */
+/* Otras estilizaciones según necesidades del diseñador */
