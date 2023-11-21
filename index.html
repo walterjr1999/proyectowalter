@@ -1,77 +1,63 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="style/estilos.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="C:\xampp\htdocs\proyectowalter\jose.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Portafolio - Diseñador Gráfico</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Diseñador Gráfico</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-
 <body>
-    <header class="header sticky sticky--top js-header">
-        <div class="grid">
-            <nav class="navigation">
-                <ul class="navigation__list navigation__list--inline">
-                    <li class="navigation__item"><a href="#" class="navigation__link navigation__link--is-active">Home</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Proyectos</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Contacto</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Sobre mí</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main class="main">
-        <div class="grid">
-            <h1>Portafolio de Diseño Gráfico</h1>
-            <p>¡Bienvenido a mi portafolio! Aquí encontrarás una selección de mis proyectos y trabajos de diseño gráfico.</p>
-            <p>El diseño es mi pasión y me esfuerzo por crear piezas creativas y visuales que transmitan mensajes impactantes.</p>
-            <p>Si estás buscando diseños únicos y de calidad, ¡no dudes en ponerte en contacto conmigo!</p>
-        </div>
-    </main>
-
-    <nav class="navbar" role="navigation">
-        <img src="https://s3.amazonaws.com/plloyd/codepen/animated-menu-logo.svg" />
-    </nav>
-
-    <div id="content">
-        <!-- Sección para mostrar proyectos -->
-        <!-- Aquí se podrían agregar imágenes, diseños y trabajos realizados -->
-        <!-- Por ejemplo: -->
-        <div class="project">
-            <img src="ruta/a/imagen-proyecto-1.jpg" alt="Proyecto 1">
-            <p>Descripción del proyecto 1</p>
-        </div>
-        <div class="project">
-            <img src="ruta/a/imagen-proyecto-2.jpg" alt="Proyecto 2">
-            <p>Descripción del proyecto 2</p>
-        </div>
-        <!-- Más proyectos -->
+  <header>
+    <div class="container">
+      <img src="logo.png" alt="Logo del diseñador">
+      <h1>Portafolio Studio Rubio</h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
     </div>
+  </header>
 
-    <footer id="mobile-footer">
-        <div id="mobile-menu">
-            <div id="mobile-footer-container">
-                <div class="mobile-link">
-                    <!-- Enlaces a redes sociales -->
-                    <a href="#" class="fa fa-facebook"> </a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-google"></a>
-                    <a href="#" class="fa fa-instagram" ></a>
-                </div>
-            </div>
-        </div>
-        <div id="mobile-footer-close"></div>
-    </footer>
+  <main>
+    <!-- Otras secciones del portafolio -->
+    
+    <section class="galeria">
+      <h2>Galería de Trabajos</h2>
+      <div class="imagenes">
+        <img src="imagen1.png" alt="Imagen 1">
+        <img src="imagen2.png" alt="Imagen 2">
+        <img src="imagen3.png" alt="Imagen 3">
+        <img src="imagen4.png" alt="Imagen 4">
+        <img src="imagen5.png" alt="Imagen 5">
+        <img src="imagen6.png" alt="Imagen 6">
 
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+        <!-- Agrega más imágenes según sea necesario -->
+      </div>
+    </section>
+  </main>
+  
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Walter Rubio</p>
+      <ul class="redes-sociales">
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </footer>  
+
+  <script src="estilojs.js"></script>
 </body>
-
 </html>
